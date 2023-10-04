@@ -8,6 +8,13 @@
 		<Attribute Name="Color" Type="STRING" Value="255,190,111"/>
 		<Resource Name="EMB_RES" Type="EMB_RES" Comment="" x="0.0" y="0.0">
 			<FBNetwork>
+				<FB Name="TestComposite" Type="FBs::Ventilsteuerung::TestComposite" Comment="" x="1866.6666666666667" y="0.0">
+					<Parameter Name="QI" Value="TRUE" Comment=""/>
+				</FB>
+				<EventConnections>
+					<Connection Source="START.COLD" Destination="TestComposite.INIT" Comment=""/>
+					<Connection Source="TestComposite.INITO" Destination="TestComposite.REQ" Comment="" dx1="1600.0" dx2="460.0" dy="900.0"/>
+				</EventConnections>
 			</FBNetwork>
 		</Resource>
 	</Device>

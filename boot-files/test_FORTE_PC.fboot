@@ -1,0 +1,59 @@
+;<Request ID="4" Action="CREATE"><FB Name="EMB_RES" Type="EMB_RES" /></Request>
+;<Request ID="5" Action="CREATE"><FBType Name="TestComposite">local EI_INIT = 0
+local EI_REQ = 1
+local EO_INITO = 0
+local EO_CNF = 1
+local DI_QI = 33554432
+local DO_QO = 67108864
+		
+local interfaceSpec = {
+  numEIs = 2,
+  EINames = {&quot;INIT&quot;, &quot;REQ&quot;},
+  EIWith = {0, 255, 0, 255},
+  EIWithIndexes = {0, 2},
+  numEOs = 2,
+  EONames = {&quot;INITO&quot;, &quot;CNF&quot;},
+  EOWith = {0, 255, 0, 255},
+  EOWithIndexes = {0, 2},
+  numDIs = 1,
+  DINames = {&quot;QI&quot;},
+  DIDataTypeNames = {&quot;BOOL&quot;},
+  numDOs = 1,
+  DONames = {&quot;QO&quot;},
+  DODataTypeNames = {&quot;BOOL&quot;},
+  numAdapters = 0,
+  adapterInstanceDefinition = {
+  }
+}
+
+local fbnSpec = {
+  internalFBs = {
+  },
+  parameters = {
+  },
+  eventConnections = {
+    {srcID = &quot;INIT&quot;, srcFBNum = -1, dstID = &quot;INITO&quot;, dstFBNum = -1},
+    {srcID = &quot;REQ&quot;, srcFBNum = -1, dstID = &quot;CNF&quot;, dstFBNum = -1}
+  },
+  fannedOutEventConnections = {
+  },
+  dataConnections = {
+    {srcID = &quot;QI&quot;, srcFBNum = -1, dstID = &quot;QO&quot;, dstFBNum = -1}
+  },
+  fannedOutDataConnections = {
+  },
+  numFBs = 0,
+  numECons = 2,
+  numFECons = 0,
+  numDCons = 1,
+  numFDCons = 0,
+  numParams = 0
+}
+
+return {interfaceSpec = interfaceSpec, fbnSpec = fbnSpec}
+</FBType></Request>
+EMB_RES;<Request ID="6" Action="CREATE"><FB Name="TestComposite" Type="FBs__Ventilsteuerung__TestComposite" /></Request>
+EMB_RES;<Request ID="7" Action="WRITE"><Connection Source="TRUE" Destination="TestComposite.QI" /></Request>
+EMB_RES;<Request ID="8" Action="CREATE"><Connection Source="START.COLD" Destination="TestComposite.INIT" /></Request>
+EMB_RES;<Request ID="9" Action="CREATE"><Connection Source="TestComposite.INITO" Destination="TestComposite.REQ" /></Request>
+EMB_RES;<Request ID="9" Action="START"/>
