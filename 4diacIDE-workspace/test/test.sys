@@ -2,24 +2,24 @@
 <System Name="test" Comment="">
 	<VersionInfo Version="1.0" Author="franz" Date="2023-10-04">
 	</VersionInfo>
-	<Device Name="FORTE_PC" Type="FORTE_PC" Comment="" x="4193.333333333334" y="1380.0">
+	<Device Name="FORTE_PC" Type="FORTE_PC" Comment="" x="1433.3333333333335" y="886.6666666666667">
 		<Parameter Name="MGR_ID" Value="C_00" Comment="Device manager socket ID"/>
 		<Attribute Name="Profile" Type="STRING" Value="DynamicTypeLoad"/>
 		<Attribute Name="Color" Type="STRING" Value="255,190,111"/>
 		<Resource Name="EMB_RES" Type="EMB_RES" Comment="" x="0.0" y="0.0">
 			<FBNetwork>
-				<FB Name="TestComposite" Type="FBs::Ventilsteuerung::TestComposite" Comment="" x="1866.6666666666667" y="0.0">
+				<FB Name="TestComposite" Type="TestComposite" Comment="" x="1866.6666666666667" y="400.0">
 					<Parameter Name="QI" Value="TRUE" Comment=""/>
 				</FB>
 				<EventConnections>
-					<Connection Source="START.COLD" Destination="TestComposite.INIT" Comment=""/>
-					<Connection Source="TestComposite.INITO" Destination="TestComposite.REQ" Comment="" dx1="1600.0" dx2="460.0" dy="900.0"/>
+					<Connection Source="START.COLD" Destination="TestComposite.INIT" Comment="" dx1="533.3333333333334"/>
+					<Connection Source="TestComposite.INITO" Destination="TestComposite.REQ" Comment="" dx1="80.0" dx2="360.0" dy="-573.3333333333334"/>
 				</EventConnections>
 			</FBNetwork>
 		</Resource>
 	</Device>
-	<Segment Name="Ethernet" Type="Ethernet" Comment="" x="5680.0" y="706.6666666666667" dx1="2000.0">
-		<Attribute Name="Color" Type="STRING" Value="208,173,114"/>
+	<Segment Name="Ethernet" Type="Ethernet" Comment="" x="2000.0" y="266.6666666666667" dx1="2000.0">
+		<Attribute Name="Color" Type="STRING" Value="200,62,208"/>
 	</Segment>
 	<Link SegmentName="Ethernet" CommResource="FORTE_PC" Comment="">
 	</Link>

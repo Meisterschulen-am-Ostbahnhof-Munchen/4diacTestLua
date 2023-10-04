@@ -4,8 +4,6 @@
 	</Identification>
 	<VersionInfo Version="1.0" Author="franz" Date="2023-10-04">
 	</VersionInfo>
-	<CompilerInfo packageName="FBs::Ventilsteuerung">
-	</CompilerInfo>
 	<InterfaceList>
 		<EventInputs>
 			<Event Name="INIT" Type="Event" Comment="Initialization Request">

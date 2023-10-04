@@ -52,7 +52,7 @@ local fbnSpec = {
 
 return {interfaceSpec = interfaceSpec, fbnSpec = fbnSpec}
 </FBType></Request>
-EMB_RES;<Request ID="6" Action="CREATE"><FB Name="TestComposite" Type="FBs__Ventilsteuerung__TestComposite" /></Request>
+EMB_RES;<Request ID="6" Action="CREATE"><FB Name="TestComposite" Type="TestComposite" /></Request>
 EMB_RES;<Request ID="7" Action="WRITE"><Connection Source="TRUE" Destination="TestComposite.QI" /></Request>
 EMB_RES;<Request ID="8" Action="CREATE"><Connection Source="START.COLD" Destination="TestComposite.INIT" /></Request>
 EMB_RES;<Request ID="9" Action="CREATE"><Connection Source="TestComposite.INITO" Destination="TestComposite.REQ" /></Request>
